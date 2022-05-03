@@ -4,6 +4,15 @@
 
 # Quick Start
 
+## Folder Structure
+
+    .
+    ├── RECON                   # RECON codes for coreset construction
+    ├── MLModel                 # ML models training codes to test the performance of RECON
+    └── README.md               
+
+
+
 ## Requirements
 Before running the codes, please make sure your C++ version is above `C++14`. 
 Library cnpy is also needed to save results in the format of npz.
@@ -14,11 +23,13 @@ The datasets can be downloaded from [dataset link](https://cloud.tsinghua.edu.cn
 
 - ` C++14`
 - `cnpy: a library to read/write .npy and .npz files in C/C++`  [link](https://github.com/rogersce/cnpy)
->
+
+
+
 ## Usage
 
 ### RECON on IMDB / IMDB-Large:
-
+Build `./RECON` first, and then perform RECON on different datasets by passing different arguments.
 > parameter setting:  
 >> [dataName] [proportion] [0:IMDB 1:IMDB-Large] [0:Classification 1:Regression]
 
@@ -31,6 +42,7 @@ The datasets can be downloaded from [dataset link](https://cloud.tsinghua.edu.cn
 
 ### RECON on stack / Brazil / taxi:
 
+
 > parameter setting:  
 >> [dataName] [proportion] 
 - `stack, p=0.0032: RECON stack 0.0032`
@@ -39,12 +51,12 @@ The datasets can be downloaded from [dataset link](https://cloud.tsinghua.edu.cn
 
 >  Note: '-L/usr/local/lib/ -lcnpy -lz' may also need to add to the program arguments, depending on the method to install cnpy.
 
-**Note:** Before running RECON, make sure the variable `DATAPATH` (line 13 in  global.h) is configured as the path of dataset.  
+**Note:** Before running RECON, make sure the variable `DATAPATH` (line 13 in  global.h) is configured as the path of dataset.
 Besides, make sure the vaiable `CSPATH` (line 14 in gloabl.h) is configured as the location to save RECON's output, i.e., coresets.
 
 
 ### Training Logistic Regression
-Run `logsitic-universal.py` to train logistic regression models.
+Run `./MLModel/logsitic-universal.py` to train logistic regression models.
 
 - IMDB: `python logistic-universal.py --data IMDBC5 --method sgd -s 0.0128 `
 
@@ -56,7 +68,7 @@ Run `logsitic-universal.py` to train logistic regression models.
  
 
 ### Training Linear Regression
-Run `linear-universal.py` to train linear regression models.
+Run `./MLModel/linear-universal.py` to train linear regression models.
 
 - IMDB: `python linear-universal.py --data IMDBCLinear --method sgd -s 0.0032 `
 
@@ -67,8 +79,8 @@ Run `linear-universal.py` to train linear regression models.
 
 - taxi: `python linear-universal.py --data taxi --method sgd -s 0.0032`
 
-**Note:** Before training models, make sure variable `DATAPATH` (line 1 in  Global.py) is configured as the path of dataset. 
-And `CSPATH` is configured as the path to RECON's output (path of coreset).  
+**Note:** Before training models, make sure variable `DATAPATH` (line 1 in  Global.py) is configured as the path of datasets. 
+And `CSPATH`(line 2 in  Global.py) is configured as the path to RECON's output (path of coreset).  
 
 
 ## License

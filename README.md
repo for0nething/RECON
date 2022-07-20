@@ -9,6 +9,7 @@
     .
     ├── RECON                   # RECON codes for coreset construction
     ├── MLModel                 # ML models training codes to test the performance of RECON
+    ├── Revision                # Revision codes
     └── README.md               
 
 

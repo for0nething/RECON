@@ -6,7 +6,6 @@
 #include "type.h"
 #include "util.h"
 #include "data.h"
-#include "coreset.h"
 #include <cstring>
 #include <fstream>
 #include <random>

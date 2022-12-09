@@ -1,7 +1,7 @@
 import numpy as np
 import time
 from torch.utils.tensorboard import SummaryWriter
-from utils.Global import *
+from MLModel.Global import *
 class Optimizer(object):
 
     @staticmethod

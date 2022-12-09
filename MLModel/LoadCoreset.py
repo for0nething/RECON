@@ -1,5 +1,5 @@
 import numpy as np
-from utils.Global import *
+from MLModel.Global import *
 
 def LoadCoreset(coreset_from, data, subset_size, batch=0, sampleSize=0):
     assert coreset_from == 'diskOurs'

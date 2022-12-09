@@ -1,5 +1,5 @@
 import numpy as np
-from utils.Global import *
+from MLModel.Global import *
 def load_dataset(dataset, prop=0.1, regression=False):
     assert dataset in ['IMDBCLinear', 'IMDBLargeCLinear', 'Brazilnew', 'IMDBC5', 'IMDBLargeC5', 'taxi', 'stackn']
 

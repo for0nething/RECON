@@ -1,5 +1,5 @@
 # RECON
-
+This repo contains the codes for the VLDB 2023 paper [_Coresets over multiple tables for feature-rich and data-efficient machine learning_](https://www.vldb.org/pvldb/vol16/p64-wang.pdf). 
 
 
 # Quick Start
@@ -98,5 +98,18 @@ And `CSPATH`(line 2 in  Global.py) is configured as the path to RECON's output (
 
 The project is available under the [MIT](LICENSE.md) license.
 
-## Contact
-If you have any questions, feel free contact us.
+## Citation
+If our work is helpful to you, please cite our [paper](https://www.vldb.org/pvldb/vol16/p64-wang.pdf):
+```bibtex
+@article{wang2022coresets,
+  title={Coresets over multiple tables for feature-rich and data-efficient machine learning},
+  author={Wang, Jiayi and Chai, Chengliang and Tang, Nan and Liu, Jiabin and Li, Guoliang},
+  journal={Proceedings of the VLDB Endowment},
+  volume={16},
+  number={1},
+  pages={64--76},
+  year={2022},
+  publisher={VLDB Endowment}
+}
+
+```

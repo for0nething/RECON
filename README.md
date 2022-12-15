@@ -47,7 +47,7 @@ and then perform RECON on different datasets by passing different arguments.
 - `IMDB,  p=0.0128 for classification:   ./RECON IMDB 0.0128 0 0 `
 - `IMDB,  p=0.0032 for regression:   ./RECON IMDB 0.0032 0 1`
 - `IMDB-Large, p=0.0016 for classification: ./RECON IMDB 0.0016 1 0`
-- `IMDB-Large, p=0.0016 for regression ./RECON IMDB: 0.0016 1 1`
+- `IMDB-Large, p=0.0016 for regression ./RECON IMDB 0.0016 1 1`
 
 
 

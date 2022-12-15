@@ -379,7 +379,7 @@ namespace IMDBC {
                                                                   idtype Large = 0,
                                                                   dtype epsilon = 0.01,
                                                                   int linear = 0,
-                                                                  int cateNum = 10,
+                                                                  int cateNum = 5,
                                                                   int saveWhere = 0,
                                                                   int verbose = 1,
                                                                   int assignSampleSize = 0
@@ -468,7 +468,7 @@ namespace IMDBC {
                 else
                     dir << CSPATH << (Large ? "IMDBLargeC5" : "IMDBC5");
             } else
-                dir << CSPATH << (Large ? "IMDBCLinear" : "IMDBLargeCLinear");
+                dir << CSPATH << (Large ? "IMDBLargeCLinear" : "IMDBCLinear");
             dir<< "-"<<PROP<<"-ours.npz";
             std::cout<<"Save to "<< dir.str() <<"\n";
             cnpy::npz_save(dir.str(), "order", &fullCS[0], {fullCS.size()}, "w");

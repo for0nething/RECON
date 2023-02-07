@@ -33,9 +33,16 @@ def test(method='sgd', data='movieLen1M', exp_decay=1, subset_size=1., greedy=1,
             rand += f'_e{ne}'
         if ne > 100:
             ne = 100
-        assert greedy == 1
+        # assert greedy == 1
         if greedy == 1:
             order, weights, total_ordering_time = LoadCoreset(coreset_from, data, subset_size, batch=batch,sampleSize=sampleSize)
+        else:
+            print('Selecting a random subset')
+            order = np.arange(0, len(train_data))
+            random.shuffle(order)
+            order = order[:int(subset_size * len(train_data))]
+            print(' 【Random subset size】 is ', int(subset_size * len(train_data)))
+            weights = np.ones(int(subset_size * len(train_data)), dtype=np.float)
         print(f'--------------- run number: {itr}, rand: {rand}, '
               f'subset: {subset_size}, subset size: {len(order)}')
 

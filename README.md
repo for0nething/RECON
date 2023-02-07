@@ -93,6 +93,23 @@ Run `linear-universal.py` to train linear regression models.
 **Note:** Before training models, make sure variable `DATAPATH` (line 1 in  Global.py) is configured as the path of datasets. 
 And `CSPATH`(line 2 in  Global.py) is configured as the path to RECON's output (path of coreset).  
 
+### Other Baselines
+
+- **Sample-Join**: The argument `--greedy [0:Uniform Sampling 1:Coreset (default)]` specifies the subset for training. 
+Therefore, Sample-Join can be achieved by setting `--greedy 0`.
+For example, to train a logistic regression model on a uniform sampling of IMDB, you may use:
+```sh
+python logistic-universal.py --data IMDBC5 --method sgd -s 0.0128 --greedy 0
+```
+
+
+- **Full**: Full can be achieved by setting `-s` to `1` on top of Sample-Join. 
+For example, to train a logistic regression model using full data of IMDB, you may use:
+```sh
+python logistic-universal.py --data IMDBC5 --method sgd -s 1 --greedy 0
+```
+
+- **Coreset-Join** and **Join-Coreset**: You can find their official implementations from [link](https://github.com/baharanm/craig).
 
 ## License
 

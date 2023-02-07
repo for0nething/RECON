@@ -7,6 +7,7 @@ This repo contains the codes for the VLDB 2023 paper [_Coresets over multiple ta
 ## Folder Structure
 
     .
+    ├── preprocess              # Data preprocessing codes
     ├── RECON                   # RECON codes for coreset construction
     ├── MLModel                 # ML models training codes to test the performance of RECON
     ├── linear-universal.py     # Evaluation of regression models
@@ -96,7 +97,7 @@ And `CSPATH`(line 2 in  Global.py) is configured as the path to RECON's output (
 ### Other Baselines
 
 - **Sample-Join**: The argument `--greedy [0:Uniform Sampling 1:Coreset (default)]` specifies the subset for training. 
-Therefore, Sample-Join can be achieved by setting `--greedy 0`.
+Sample-Join can be achieved by setting `--greedy 0`.
 For example, to train a logistic regression model on a uniform sampling of IMDB, you may use:
 ```sh
 python logistic-universal.py --data IMDBC5 --method sgd -s 0.0128 --greedy 0
@@ -110,6 +111,11 @@ python logistic-universal.py --data IMDBC5 --method sgd -s 1 --greedy 0
 ```
 
 - **Coreset-Join** and **Join-Coreset**: You can find their official implementations from [link](https://github.com/baharanm/craig).
+
+### Data Preprocessing
+In general, our preprocessing of each dataset in the `preprocess` directory can be summarized as data cleaning, normalization, and partition by label. 
+We provide the preprocessed data in [dataset link](https://cloud.tsinghua.edu.cn/d/96132c6b279e4097baaa/).
+The raw datasets can be found in their original sources.
 
 ## License
 

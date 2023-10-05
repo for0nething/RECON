@@ -21,7 +21,7 @@ Before running the codes, please make sure your C++ version is above `C++14`.
 Library cnpy is also needed to save results in the format of npz.
 
 The dataset path is configured by variable `DATAPATH` (line 9 in  global.h), which should also be configured properly before running the codes.
-The datasets can be downloaded from [dataset link](https://cloud.tsinghua.edu.cn/d/96132c6b279e4097baaa/).
+The datasets can be downloaded from [dataset link](https://drive.google.com/drive/folders/1kOLJQRnJk-_87y3WVq8Dwu18JYylbQhb?usp=sharing).
 - `Python 3.7+`
 
 - ` C++14`
@@ -114,7 +114,7 @@ python logistic-universal.py --data IMDBC5 --method sgd -s 1 --greedy 0
 
 ### Data Preprocessing
 In general, our preprocessing of each dataset in the `preprocess` directory can be summarized as data cleaning, normalization, and partition by label. 
-We provide the preprocessed data in [dataset link](https://cloud.tsinghua.edu.cn/d/96132c6b279e4097baaa/).
+We provide the preprocessed data in [dataset link](https://drive.google.com/drive/folders/1kOLJQRnJk-_87y3WVq8Dwu18JYylbQhb?usp=sharing).
 The raw datasets can be found in their original sources.
 
 ## License
